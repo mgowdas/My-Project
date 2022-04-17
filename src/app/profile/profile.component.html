@@ -1,0 +1,173 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="profile">
+          <h1 class="page-header">{{name}}</h1>
+          <div class="row">
+            <div class="col-md-4">
+              <img src="../../assets/img/user.png" class="img-thumbnail" />
+            </div>
+            <div class="col-md-8">
+              <ul>
+                <li><strong>Name:</strong> {{name}}</li>
+                <li><strong>Email Address: </strong>{{email}}</li>
+                <li><strong>City: </strong>{{city}}</li>
+                <li><strong>State: </strong>{{state}}</li>
+                <li><strong>Gender:</strong> {{gender}}</li>
+                <li><strong>Profession: </strong>{{profession}}</li>
+              </ul>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Profile Wall</h3>
+                </div>
+                <div class="panel-body">
+                  <form #usersignup="ngForm" (ngSubmit)="onClickSubmit(usersignup.value);resetUserForm(usersignup)">
+                    <div class="form-group">
+                      
+                        <label for="text"></label>
+                         
+                          <textarea rows="4"  placeholder="write on the wall" class="form-control" id="text" name="text" ngModel></textarea>
+                    </div>
+                  
+                     <!-- <a routerLink='home'> -->
+                      <button type="submit" class="btn btn-success">Submit</button>
+                    
+                    
+                    <div class="pull-right">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-default">
+                          <i class="fa fa-pencil"></i> Text
+                        </button>
+                        <button type="button" class="btn btn-default">
+                          <i class="fa fa-file-image-o"></i> Image
+                        </button>
+                        <button type="button" class="btn btn-default">
+                          <i class="fa fa-file-video-o"></i> Video
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- col-md-8 end -->
+
+      <div class="col-md-4">
+        <div class="panel panel-default friends">
+          <div class="panel-heading">
+            <h3 class="panel-title">My Friends</h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li>
+                <a class="thumbnail" routerLink="/profile"
+                  ><img src="../../assets/img/user.png"
+                /></a>
+              </li>
+              <li>
+                <a class="thumbnail" routerLink="/profile"
+                  ><img src="../../assets/img/user.png"
+                /></a>
+              </li>
+              <li>
+                <a class="thumbnail" routerLink="/profile"
+                  ><img src="../../assets/img/user.png"
+                /></a>
+              </li>
+              <li>
+                <a class="thumbnail" routerLink="/profile"
+                  ><img src="../../assets/img/user.png"
+                /></a>
+              </li>
+              <li>
+                <a class="thumbnail" routerLink="/profile"
+                  ><img src="../../assets/img/user.png"
+                /></a>
+              </li>
+              <li>
+                <a class="thumbnail" routerLink="profile"
+                  ><img src="../../assets/img/user.png"
+                /></a>
+              </li>
+              <li>
+                <a class="thumbnail" routerLink="profile"
+                  ><img src="../../assets/img/user.png"
+                /></a>
+              </li>
+              <li>
+                <a class="thumbnail" routerLink="profile"
+                  ><img src="../../assets/img/user.png"
+                /></a>
+              </li>
+              <li>
+                <a class="thumbnail" routerLink="profile"
+                  ><img src="../../assets/img/user.png"
+                /></a>
+              </li>
+              <li>
+                <a class="thumbnail" routerLink="profile"
+                  ><img src="../../assets/img/user.png"
+                /></a>
+              </li>
+              <li>
+                <a class="thumbnail" routerLink="profile"
+                  ><img src="../../assets/img/user.png"
+                /></a>
+              </li>
+              <li>
+                <a class="thumbnail" routerLink="profile"
+                  ><img src="../../assets/img/user.png"
+                /></a>
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+            <a class="btn btn-primary" href="#">View All Friends</a>
+          </div>
+        </div>
+
+        
+        <div class="panel panel-default groups">
+          <div class="panel-heading">
+            <h3 class="panel-title">Latest Groups</h3>
+          </div>
+
+          <div class="panel-body">
+            <div class="group-item">
+              <img src="../../assets/img/businesslogo.JPG" />
+              <h4><a routerLink="/joingroup" href="../joingroup/joingroup.component.html">Business World</a></h4>
+              <p>This is a official business group of Capgemini</p>
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="group-item">
+              <img src="../../assets/img/Human Resourses logo.JPG" />
+              <h4><a routerLink="/joinhr" href="../joinhr/joinhr.component.html">H R Group</a></h4>
+            <p>This is official HR Department group of Capgemini</p>
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="group-item">
+              <img src="../../assets/img/l and d logo.JPG" />
+              <h4><a routerLink="/joinld" href="../joinld/joinld.component.html">L & D</a></h4>
+              <p>This is official L&D group of Capgemini</p>
+            </div>
+            
+            <div class="clearfix"></div>
+            <a class="btn btn-primary"routerLink="/groups" href="../joingroup/joingroup.component.html">View All Groups</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

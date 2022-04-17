@@ -1,0 +1,40 @@
+<header>
+  <div class="container">
+    <div>
+      <img src="../../assets/img/cglogo.png" alt="DCX" class="logo" style="height: 50px; width: 200px" />
+      <span> Social Netwroking for Everyone</span>
+    </div>
+    <form *ngIf="!checkToken()" class="form-inline" #usersignin="ngForm"
+      (ngSubmit)="onClickSubmit(usersignin.value);resetDetails(usersignin)">
+      <font style="color: red;font: 15px;">{{output}}</font>
+      <div class="form-group">
+        <label class="sr-only" for="email">Email address</label>
+        <input #emailController="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" class="form-control" id="email" name="email" placeholder="Email" required ngModel />
+        <span *ngIf="emailController.invalid && emailController.touched" class="alert">
+          <p style="color: red">Please enter valid email</p>
+        </span>
+      </div>
+      <div class="form-group">
+        <label class="sr-only" for="password">Password</label>
+        <input #passwordControll="ngModel" type="password" class="form-control" id="password" name="password" placeholder="Password" required ngModel
+         pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"/>
+        <span *ngIf="passwordControll.invalid && passwordControll.touched" class="alert">
+          <p style="color: red">Please enter valid password</p>
+        </span>
+      </div>
+
+      <button type="submit" class="btn btn-default">Sign in</button><br />
+      <div class="checkbox">
+        <label> <input type="checkbox" id="rememberMe" name="rememberMe" onclick="setcookie()" /> Remember me </label>
+      </div>
+    </form>
+
+    
+    <form *ngIf="checkToken()" class="form-inline" #usersignin="ngForm">
+      <button (click)="logout()" type="submit" class="btn btn-default">Logout</button><br />
+      <div class="checkbox">
+        
+      </div>
+    </form>
+  </div>
+</header>
